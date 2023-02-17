@@ -24,7 +24,7 @@ git clone https://github.com/fleekxyz/ethereum-boilerplate.git
 Install all dependencies:
 
 ```
-pnpm Install
+pnpm install
 ```
 
 Start the project:
