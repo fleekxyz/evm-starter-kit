@@ -6,7 +6,6 @@ async function faucetTo(receiver: string, ethers: HardhatEthersHelpers) {
   const addressesFile = path.join(
     __dirname + "/../frontend/src/contracts/contracts.json");
 
-  console.log(addressesFile);
   if (!fs.existsSync(addressesFile)) {
     console.error("You need to deploy your contract first");
     return;
@@ -22,7 +21,7 @@ async function faucetTo(receiver: string, ethers: HardhatEthersHelpers) {
 
   const token = await ethers.getContractAt("Token", tokenAddress);
 
-  const [tokenOwner] = await ethers.getSigners();
+  const [_, tokenOwner] = await ethers.getSigners();
 
   const tx = await token.connect(tokenOwner).transfer(receiver, 50);
   await tx.wait();

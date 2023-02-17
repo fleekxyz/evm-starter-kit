@@ -5,7 +5,7 @@ import { useSendTransaction, usePrepareSendTransaction } from 'wagmi';
 
 import { parseEther } from 'ethers/lib/utils.js';
 
-export default function Home() {
+export default function Dapp() {
   const [receiverAddress, setReceiverAddress] = useState<string>("");
   const [transferAmount, setTransferAmout] = useState<string>("0");
   const addRecentTransaction = useAddRecentTransaction();
@@ -26,7 +26,7 @@ export default function Home() {
     }
   });
 
-  const { data, isLoading, isSuccess, sendTransaction, status: transactionStatus } = useSendTransaction(config)
+  const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction(config)
 
   const handleSendTransaction = async () => {
     sendTransaction?.();

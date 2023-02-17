@@ -26,7 +26,7 @@ contract Token {
   constructor(address _owner) {
     // The totalSupply is assigned to transaction sender, which is the account
     // that is deploying the contract.
-    balances[owner] = totalSupply;
+    balances[_owner] = totalSupply;
     owner = _owner;
   }
 
