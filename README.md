@@ -1,6 +1,18 @@
+![ethereumdapp](https://user-images.githubusercontent.com/73345016/219379423-d5e96187-2152-4b2e-88dd-adc305d08f79.png)
+
 # Ethereum boilerplate OSS
 
-Dapp Boilerplate that gives you maximum flexibility using oper-source packages & tools giving you a fully customizable experience bootstraped with minimal configuration.
+This repo is part of [fleekxyz/templates](https://github.com/fleekxyz/templates) a collection of Collection of Boileplates & examples configured to easily deploy to Fleek.xyz with the pre-configured scrips. End-to-end, from its contract to a Next.js frontend integrated to easily use the contract's ABIs.
+
+Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
+
+### Tech-Stack
+- **Hardhat:** Development environment for Ethereum.
+- **TypeScript:** Strongly typed lenguage that builds on JavaScript.
+- **wagmi:** Collection on React Hooks for working with Ethereum.
+- **RainbowKit:** React library to add wallet connection to your Dapp.
+- **Typechain:** Typescript bindings for Ethereum smart contracts.
+- **Next.js:** The React Framework.
 
 ### Quick start
 To get started clone the `ethereum-dapp-oss`:
@@ -38,7 +50,7 @@ Now you can interact with the frontend by going to [localhost:3000](https://loca
 - `dev`: Starts & deploys the hardhat node to the localhost & starts the frontend in development mode.
 
 ### How to customize
-You can check the [contracts](), [deploys]() & [frontend]() Readme files for more details.
+For customizing the project, please check the [customizing guide](customize.md).
 
 #### Hardhat
 - `contracts/`: This folder contains all of your contracts, it comes with example `Token.sol` to illustrate the experience.
@@ -48,13 +60,10 @@ You can check the [contracts](), [deploys]() & [frontend]() Readme files for mor
 - `frontend/`: Contains a minimal NextJS application prepared with `wagmi`, `rainbow kit` & `tailwind`
   - You can get started by customizing `frontend/src/pages/index.tsx`
 
-### Tech-Stack
-- **Hardhat:** Development environment for Ethereum.
-- **TypeScript:** Strongly typed lenguage that builds on JavaScript.
-- **wagmi:** Collection on React Hooks for working with Ethereum.
-- **RainbowKit:** React library to add wallet connection to your Dapp.
-- **Typechain:** Typescript bindings for Ethereum smart contracts.
-- **Next.js:** The React Framework.
+## Deploying to Fleek
+
+(steps)
+
 
 ## Contributing
 
