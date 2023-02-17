@@ -18,7 +18,7 @@ Dapp Boilerplate that gives you maximum flexibility using oper-source packages, 
 To get started clone the `ethereum-dapp-oss`:
 
 ```
-git clone <repo_url>
+git clone https://github.com/fleekxyz/ethereum-boilerplate.git
 ```
 
 Install all dependencies:
