@@ -62,8 +62,57 @@ For customizing the project, please check the [customizing guide](customize.md).
 
 ## Deploying to Fleek
 
-(steps)
+In order to deploy the Frontend, we'll use `Fleek CLI`, which allows us to deploy to IPFs from the `CLI`. If you haven't used Fleek CLI before, read the CLI section of [our docs](https://docs.fleek.xyz/getting-started/cli/).
 
+You'll need to install the `CLI` as a global package by runnign the following command:
+
+```
+npm install -g @fleekxyz/cli
+```
+
+Then, move into the frontend project by running
+```
+cd frontend
+```
+
+and create a new Project:
+```
+fleek projects create
+```
+
+and then create a new site
+```
+fleek sites init
+```
+
+When you start the process, you will be prompted to create a new site or use an existing one. Go ahead and input a name for the site.
+
+```
+ > fleek sites init
+ WARN! Fleek CLI is in beta phase, use it under your own responsibility
+ ? Choose one of the existing sites or create a new one. › 
+ ❯ Create a new site
+```
+
+Now that you have named the site, you’ll need to specify the output directory., Since we’re using NextJs, the output directory should be `out`:
+```
+ ✔ Choose one of the existing sites or create a new one. › Create a new site
+ ✔ Type name of you new site. … fleek-demo-docs
+ ✔ Specify the dist directory from where the site will be uploaded from > out
+``` 
+
+For the last step, choose to add a build command which will be `pnpm run build`
+
+That's it! Your site is set up. You will see a file named fleek.json has been created in your directory, which holds the configuration to deploy the site.
+
+You can now deploy your site to IPFS by running `fleek sites deploy`:
+```
+ > fleek sites deploy
+ WARN! Fleek CLI is in beta phase, use it under your own responsibility
+ > Success! Deployed! IPFS CID: QmQ88SAK9shZ7NUFTPJDcS9zuMmU7tDPbC9e9j5264Yfj4
+```
+
+If you are interested in other features like continuous integration, you can check this guide on deploying to fleek using GitHub Actions [here](https://docs.fleek.xyz/services/sites/#continuous-integration-ci).
 
 ## Contributing
 
