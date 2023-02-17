@@ -50,7 +50,7 @@ Now you can interact with the frontend by going to [localhost:3000](https://loca
 - `dev`: Starts & deploys the hardhat node to the localhost & starts the frontend in development mode.
 
 ### How to customize
-You can check the [contracts](), [deploys]() & [frontend]() Readme files for more details.
+For customizing the project, please check the [customizing guide](customize.md).
 
 #### Hardhat
 - `contracts/`: This folder contains all of your contracts, it comes with example `Token.sol` to illustrate the experience.
