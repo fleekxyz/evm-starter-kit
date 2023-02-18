@@ -4,6 +4,8 @@
 
 This repo is part of [fleekxyz/templates](https://github.com/fleekxyz/templates) a collection of Collection of Boileplates & examples configured to easily deploy to Fleek.xyz with the pre-configured scrips. End-to-end, from its contract to a Next.js frontend integrated to easily use the contract's ABIs.
 
+- Find a deep-dive guide on this [article](https://blog.fleek.co/posts/ethereum-boilerplate-ipfs-nextjs).
+
 Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
 
 ### Tech-Stack
