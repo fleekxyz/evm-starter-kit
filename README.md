@@ -9,12 +9,12 @@ This repo is part of [fleekxyz/templates](https://github.com/fleekxyz/templates)
 Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
 
 ### Tech-Stack
-- **Hardhat:** Development environment for Ethereum.
-- **TypeScript:** Strongly typed lenguage that builds on JavaScript.
-- **wagmi:** Collection on React Hooks for working with Ethereum.
-- **RainbowKit:** React library to add wallet connection to your Dapp.
-- **Typechain:** Typescript bindings for Ethereum smart contracts.
-- **Next.js:** The React Framework.
+- **[Hardhat](https://hardhat.org/):** Development environment for Ethereum.
+- **[TypeScript](https://www.typescriptlang.org/):** Strongly typed lenguage that builds on JavaScript.
+- **[wagmi](https://wagmi.sh/):** Collection on React Hooks for working with Ethereum.
+- **[RainbowKit](https://www.rainbowkit.com/):** React library to add wallet connection to your Dapp.
+- **[Typechain](https://www.npmjs.com/package/typechain):** Typescript bindings for Ethereum smart contracts.
+- **[Next.js](https://nextjs.org/):** The React Framework.
 
 ### Quick start
 To get started clone the `ethereum-dapp-oss`:
