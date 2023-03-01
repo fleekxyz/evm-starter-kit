@@ -41,7 +41,7 @@ pnpm dev
 Now you can interact with the frontend by going to [localhost:3000](https://localhost:3030)
 
 ### Available Scripts
-- `hardhat:generate-abi`: Deploys contracts and exports the `API` & `address` to frontend. 
+- `hardhat:generate-abi`: Deploys contracts and exports the `ABI` & `address` to frontend. 
 - `hardhat:clean`: Cleans the generated `artifacts` `cache` & `typechain-types` generated folders.
 - `hardhat:deploy`: Deploys your contract to localhost & exports the `ABI` to the frontend.
 - `hardhat:node`: Starts the Hardhat node.
