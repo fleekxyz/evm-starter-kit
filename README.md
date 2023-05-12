@@ -1,10 +1,8 @@
-![ethereumdapp](https://user-images.githubusercontent.com/73345016/219379423-d5e96187-2152-4b2e-88dd-adc305d08f79.png)
+# Ethereum + Fleek Starter Kit
 
-# Ethereum boilerplate OSS
+![Preview](./.github/preview.png)
 
-This repo is part of [fleekxyz/templates](https://github.com/fleekxyz/templates) a collection of Collection of Boileplates & examples configured to easily deploy to Fleek.xyz with the pre-configured scrips. End-to-end, from its contract to a Next.js frontend integrated to easily use the contract's ABIs.
-
-- Find a deep-dive guide on this [article](https://blog.fleek.co/posts/ethereum-boilerplate-ipfs-nextjs).
+> Find a deep-dive guide on this [article](https://blog.fleek.co/posts/ethereum-boilerplate-ipfs-nextjs).
 
 Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
 
@@ -60,81 +58,43 @@ For customizing the project, please check the [customizing guide](customize.md).
 
 #### Frontend
 - `frontend/`: Contains a minimal NextJS application prepared with `wagmi`, `rainbow kit` & `tailwind`
-  - You can get started by customizing `frontend/src/pages/index.tsx`
+ - You can get started by customizing `frontend/src/pages/index.tsx`
 
-## Deploying to Fleek
+## ⚡ How to deploy to Fleek
 
-In order to deploy the Frontend, we'll use `Fleek CLI`, which allows us to deploy to IPFs from the `CLI`. If you haven't used Fleek CLI before, read the CLI section of [our docs](https://docs.fleek.xyz/getting-started/cli/).
-
-You'll need to install the `CLI` as a global package by runnign the following command:
-
-```
-npm install -g @fleekxyz/cli
-```
-
-Then, move into the frontend project by running
-```
-cd frontend
-```
-
-and create a new Project:
-```
-fleek projects create
-```
-
-and then create a new site
-```
-fleek sites init
-```
-
-When you start the process, you will be prompted to create a new site or use an existing one. Go ahead and input a name for the site.
-
+### 1. Create a `fleek.json` config file:
+You can configure this site deployment using [Fleek CLI]() and running:
 ```
  > fleek sites init
- WARN! Fleek CLI is in beta phase, use it under your own responsibility
- ? Choose one of the existing sites or create a new one. › 
- ❯ Create a new site
+  WARN! Fleek CLI is in beta phase, use it under your own responsibility
+  ? Choose one of the existing sites or create a new one. › 
+  ❯ Create a new site
+```
+ It will prompt you for a `name`, `dist` directory location & `build command`
+
+ - `name`: How you want to name the site
+ - `dist`: The output directory where the site is located, for this template it's `dist`
+ - `build command`: Command to build your site, this will be used to deploy the latest version either by CLI or Github Actions
+
+### 2. Deploy the site
+After configuiring your `fleek.json` file, you can deployt the site by running
+
+```
+fleek sites deploy
+```
+After running it you will get an output like this:
+```
+ WARN! Fleek CLI is in beta, use it at your own discretion
+  > Success! Deployed!
+  > Site IPFS CID: QmP1nDyoHqSrRabwUSrxRV3DJqiKH7b9t1tpLcr1NTkm1M
+
+  > You can visit through the gateway:
+  > https://ipfs.io/ipfs/QmP1nDyoHqSrRabwUSrxRV3DJqiKH7b9t1tpLcr1NTkm1M
 ```
 
-Now that you have named the site, you’ll need to specify the output directory., Since we’re using NextJs, the output directory should be `out`:
-```
- ✔ Choose one of the existing sites or create a new one. › Create a new site
- ✔ Type name of you new site. … fleek-demo-docs
- ✔ Specify the dist directory from where the site will be uploaded from > out
-``` 
-
-For the last step, choose to add a build command which will be `pnpm run build`
-
-That's it! Your site is set up. You will see a file named fleek.json has been created in your directory, which holds the configuration to deploy the site.
-
-You can now deploy your site to IPFS by running `fleek sites deploy`:
-```
- > fleek sites deploy
- WARN! Fleek CLI is in beta phase, use it under your own responsibility
- > Success! Deployed! IPFS CID: QmQ88SAK9shZ7NUFTPJDcS9zuMmU7tDPbC9e9j5264Yfj4
-```
-
-If you are interested in other features like continuous integration, you can check this guide on deploying to fleek using GitHub Actions [here](https://docs.fleek.xyz/services/sites/#continuous-integration-ci).
-
-## Contributing
-
-Contributions are always welcome!
-
-Please refer to each project's style and contribution guidelines for submitting patches and additions. In general, we follow the "fork-and-pull" Git workflow.
-
-1. Fork the repo on GitHub
-2. Clone the project to your own machine
-3. Commit changes to your own branch
-4. Push your work back up to your fork
-5. Submit a Pull request so that we can review your changes
-
-> NOTE: Be sure to merge the latest from "upstream" before making a pull request!
-
-## Requests
-
-Is the framework you're looking for not here?
-
-Please create an [issue](https://github.com/fleekxyz/templates/issues) describing your request We'll chck it out and consider adding it on future releases!
+### Extra features
+- **Continuous Integration (CI):** `fleek sites ci` [Documentation.](https://docs.fleek.xyz/services/sites/#continuous-integration-ci)
+- **Adding custom domains:** `fleek domains create` [Documentation.](https://docs.fleek.xyz/services/domains/)
 
 ## License
 
