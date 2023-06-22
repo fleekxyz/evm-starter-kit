@@ -15,10 +15,10 @@ Dapp Boilerplate that gives you maximum flexibility using oper-source packages, 
 - **[Next.js](https://nextjs.org/):** The React Framework.
 
 ### Quick start
-To get started clone the `ethereum-dapp-oss`:
+To get started clone the `evm-starter-kit`:
 
 ```
-git clone https://github.com/fleekxyz/ethereum-boilerplate.git
+git clone https://github.com/fleekxyz/evm-starter-kit.git
 ```
 
 Install all dependencies:
