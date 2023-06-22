@@ -1,4 +1,4 @@
-# Ethereum + Fleek Starter Kit
+# EVM + Fleek Starter Kit
 
 ![Preview](./.github/preview.png)
 
@@ -7,11 +7,11 @@
 Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
 
 ### Tech-Stack
-- **[Hardhat](https://hardhat.org/):** Development environment for Ethereum.
+- **[Hardhat](https://hardhat.org/):** Development environment for EVM-compatible chains.
 - **[TypeScript](https://www.typescriptlang.org/):** Strongly typed lenguage that builds on JavaScript.
 - **[wagmi](https://wagmi.sh/):** Collection on React Hooks for working with Ethereum.
 - **[RainbowKit](https://www.rainbowkit.com/):** React library to add wallet connection to your Dapp.
-- **[Typechain](https://www.npmjs.com/package/typechain):** Typescript bindings for Ethereum smart contracts.
+- **[Typechain](https://www.npmjs.com/package/typechain):** Typescript bindings for EVM-compatible smart contracts.
 - **[Next.js](https://nextjs.org/):** The React Framework.
 
 ### Quick start
@@ -55,6 +55,42 @@ For customizing the project, please check the [customizing guide](customize.md).
 #### Hardhat
 - `contracts/`: This folder contains all of your contracts, it comes with example `Token.sol` to illustrate the experience.
 - `deploys/`: Each file is meant to deploy a contract, you can check the `001_deploy_token.ts` for an example.
+
+## Hardhat and EVM Compatibility
+
+Hardhat's flexible configuration makes it not just useful for Ethereum but for any EVM-compatible blockchains as well. All you need to do is update the Hardhat configuration file (hardhat.config.ts in this case) to include the network details of the desired blockchain.
+
+The network settings would include the URL of the network's node and the private key for the account used for deployment. Here is a simplified illustration:
+
+```typescript
+// hardhat.config.ts
+
+const config: HardhatUserConfig = {
+  solidity: "0.8.17",
+  networks: {
+    hardhat: {
+      chainId: 1337 // We set 1337 to make interacting with MetaMask simpler
+    },
+    myOtherEvmNetwork: {
+      url: "http://localhost:8545", // your node URL here
+      accounts: ["yourPrivateKey"], // your private key here
+      chainId: 1338 // chainId of your network
+    }
+  },
+  namedAccounts: {
+    deployer: 0,
+    tokenOwner: 1,
+    addr1: 2,
+    addr2: 3,
+  },
+};
+
+export default config;
+```
+
+After this configuration update, you can deploy your contracts to the specified network by running `npx hardhat run --network myOtherEvmNetwork scripts/deploy.ts`.
+
+Remember to replace `"http://localhost:8545"` and `"yourPrivateKey"` with your actual node URL and private key, respectively. This makes Hardhat a powerful and flexible tool for deploying contracts to different EVM-compatible blockchains.
 
 #### Frontend
 - `frontend/`: Contains a minimal NextJS application prepared with `wagmi`, `rainbow kit` & `tailwind`
