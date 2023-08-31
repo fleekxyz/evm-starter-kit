@@ -1,6 +1,6 @@
 # EVM + Fleek Starter Kit
 
-![image](https://github.com/fleekxyz/evm-starter-kit/assets/73345016/26c287a3-6b71-4e52-8ace-81a49972d211)
+![image](https://github.com/fleekxyz/evm-starter-kit/assets/55561695/03494951-3066-4abd-8b3e-de8ce1888e1e)
 
 > Find a deep-dive guide on this [article](https://blog.fleek.co/posts/ethereum-boilerplate-ipfs-nextjs).
 
