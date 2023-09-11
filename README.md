@@ -4,7 +4,7 @@
 
 > Find a deep-dive guide on this [article](https://blog.fleek.co/posts/ethereum-boilerplate-ipfs-nextjs).
 
-Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack, and tools giving you a fully customizable experience bootstraped with minimal configuration.
+Dapp Boilerplate that gives you maximum flexibility using oper-source packages, a non-binding stack and tools giving you a fully customizable experience bootstraped with minimal configuration.
 
 ### Tech-Stack
 - **[Hardhat](https://hardhat.org/):** Development environment for EVM-compatible chains.
