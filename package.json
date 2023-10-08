@@ -10,6 +10,7 @@
     "hardhat:node": "hardhat node",
     "frontend:dev": "cd ./frontend && pnpm run dev",
     "frontend:clean": "cd ./frontend && pnpm run clean",
+    "frontend:build": "cd ./frontend && pnpm i && pnpm build",
     "clean": "concurrently 'pnpm:frontend:clean' 'pnpm:hardhat:clean'",
     "dev": "pnpm run hardhat:generate-abi && concurrently 'pnpm:hardhat:node' 'wait-on http://localhost:8545 && pnpm run hardhat:deploy' 'pnpm:frontend:dev'",
     "test": "hardhat test"
